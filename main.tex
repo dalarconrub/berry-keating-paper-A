@@ -603,4 +603,102 @@ validated by the author.
 \bibliographystyle{plain}
 \bibliography{references}
 
+
+%% ================================================================
+\appendix
+
+\section{Empirical Painlev\'e~V perturbation}
+\label{app:painleve}
+
+In this appendix we quantify how the Berry-Keating form factor correction
+modifies the Painlev\'e~V solution governing the spacing distribution.
+For background on the sine kernel, Fredholm determinants, and the
+$\sigma$-form of Painlev\'e~V, we refer to~\cite{tracywidom1994,
+jimbo1981, alarcon2026c}; for the joint spacing density
+$p_2^{\mathrm{GUE}}(s_1,s_2)$ via Schur complement,
+see~\cite{alarcon2026b, bornemann2010}.
+
+\subsection{Empirical measurement of $\delta\sigma(s)$}
+
+The gap probability $E(s) = \det(I - K_s)$ and the Painlev\'e function
+$\sigma(s) = s\,\frac{d}{ds}\ln E(s)$ fully determine the spacing
+distribution $p(s)$ through standard GUE
+theory~\cite{tracywidom1994, jimbo1981}. For Riemann zeros at height $T$,
+$\sigma$ is perturbed:
+$\sigma^{\mathrm{Riem}}(s;T) = \sigma_{\mathrm{GUE}}(s) + \delta\sigma(s;T)$.
+We measure $\delta\sigma$ from the Odlyzko zeros ($\log T \approx 10$,
+100{,}000 zeros) by computing the empirical survivor function of the
+unfolded gaps and extracting $\sigma^{\mathrm{Riem}}$ by spline
+differentiation of $\ln E_0^{\mathrm{Riem}}(s)$.
+
+The result is well approximated by a linear function:
+\begin{equation}
+\delta\sigma(s) \approx \frac{0.157 - 0.320\,s}{\log^2 T}\,,
+\qquad R^2 = 0.91\,,
+\label{eq:dsigma}
+\end{equation}
+with a zero crossing at $s_0 = 0.49$. This perturbation has a clear
+physical interpretation:
+\begin{itemize}
+\item For $s < s_0$: $\delta\sigma > 0$, making $\sigma$ less negative.
+Since $E(s) = \exp\!\bigl(\int \sigma/s\,ds\bigr)$, this \emph{increases}
+the gap probability---fewer gaps smaller than $s_0$ (stronger repulsion).
+\item For $s > s_0$: $\delta\sigma < 0$, making $\sigma$ more negative.
+This \emph{decreases} the gap probability---fewer gaps larger than $s_0$
+(tail suppression).
+\end{itemize}
+Both effects narrow the spacing distribution, consistent with
+$\mathrm{std}(s) < \mathrm{std}_{\mathrm{GUE}}$ (Section~\ref{sec:mechanism}).
+
+\subsection{Propagation chain $\delta\sigma \to \delta p \to c$}
+
+We close the quantitative chain in four steps:
+
+\paragraph{Step 1.}
+Perturb the gap probability:
+$E_\delta(s) = E_0(s)\,\exp\!\bigl(\int_0^s \delta\sigma(t)/t\,dt\bigr)$,
+where $E_0$ is the Palm void probability computed via
+Bornemann's method~\cite{bornemann2010} with $n_{\mathrm{quad}} = 48$.
+
+\paragraph{Step 2.}
+Compute the perturbed spacing distribution:
+$p_\delta(s) = -E_\delta'(s)$.
+
+\paragraph{Step 3.}
+Extract $\mathrm{std}_\delta$ and $\mathrm{Corr}_\delta$ from $p_\delta$
+and the perturbed joint density $p_{2,\delta}$.
+
+\paragraph{Step 4.}
+Compute $c_{\mathrm{pred}}$ using the decomposition~\eqref{eq:decomposition}
+with the sensitivities from CUE Monte Carlo.
+
+This chain yields $c_{\mathrm{pred}} = 1.239$, reproducing $99.5\%$ of
+$c_{\mathrm{emp}} = 1.245$.
+
+\subsection{Why the chain is non-perturbative}
+
+The form factor correction $\delta b_2^{\mathrm{PNT}}(\tau) = -\tau/\log^2 T$
+connects to $\delta\sigma$ through the chain:
+\begin{equation}
+\delta b_2(\tau) \;\xrightarrow{\mathrm{FT}}\;
+\delta Y_2(r) \;\xrightarrow{\sqrt{\;\cdot\;}}\;
+K^{\mathrm{BK}}(r) \;\xrightarrow{\det}\;
+E^{\mathrm{BK}}(s) \;\xrightarrow{d/ds}\;
+\sigma^{\mathrm{BK}}(s)\,.
+\label{eq:chain}
+\end{equation}
+The step $\delta Y_2 \to K^{\mathrm{BK}}$ is the bottleneck.
+A Born (first-order) approximation in $\delta Y_2$ captures only $26\%$ of
+the empirical $\delta\sigma$~\cite{alarcon2026b}; the remaining $74\%$ is
+intrinsically non-perturbative, arising from the singularity
+$\mathrm{sinc}(1) = 0$ which prevents any regular expansion of
+$K = \sqrt{\mathrm{sinc}^2 + \varepsilon\,\delta Y_2}$ at the typical
+gap~\cite{alarcon2026c}.
+
+The $\delta\sigma$ measured empirically in~\eqref{eq:dsigma} therefore
+encodes the \emph{full non-perturbative} effect of the prime number
+correction on the Painlev\'e~V solution---information that no
+perturbative expansion around GUE can reproduce. Computing $\delta\sigma$
+analytically from $\delta b_2$ remains an open problem.
+
 \end{document}
