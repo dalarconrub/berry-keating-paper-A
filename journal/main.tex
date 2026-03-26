@@ -556,6 +556,39 @@ indicating that convergence to GUE is incomplete even at $T \sim 3 \times 10^{10
 for $\sigma_0 > 0.525$).
 \end{enumerate}
 
+\subsection{Validation at high $\log T$ with sparse Odlyzko zeros}
+
+As an independent consistency check, we measure $\langle r\rangle$ from
+three sparse Odlyzko datasets at much higher heights than the main
+dataset~\cite{odlyzko1987}. These contain only ${\sim}\,10{,}000$ zeros each
+(giving $\sigma_r \approx 0.0023$, roughly $10\times$ larger than the Platt
+points), but probe $\log T$ values far beyond the Platt range:
+
+\begin{table}[ht]
+\centering
+\caption{Consistency check with sparse Odlyzko zeros (not included in
+the Model~A fit). Predictions use the best-fit parameters
+from~\eqref{eq:modelA}.}
+\label{tab:sparse}
+\begin{tabular}{lccccr}
+\toprule
+Dataset & $\log T$ & $N$ & $\langle r\rangle$ & $\sigma_r$ & Residual \\
+\midrule
+zeros3 & 26.3 & 10{,}000 & 0.60004 & 0.00232 & $-0.29\sigma$ \\
+zeros4 & 46.4 & 10{,}000 & 0.59716 & 0.00231 & $-1.01\sigma$ \\
+zeros5 & 48.7 & 10{,}000 & 0.60193 & 0.00229 & $+1.09\sigma$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All three points are consistent with Model~A within $\sim\!1\sigma$.
+At $\log T \approx 47$--$49$, the correction $c/\log^2 T \approx 0.0005$
+is negligible compared to $\sigma_r$, so these points effectively measure
+$R_\infty$ directly. Their mean, $\langle r\rangle = 0.5997 \pm 0.0013$,
+is consistent with $R_\infty = 0.59891 \pm 0.00013$. This extends the
+validation of Model~A from a factor $2.5\times$ in $\log T$ (the main
+dataset: $9.7$--$24.1$) to a factor $5\times$ ($9.7$--$48.7$).
+
 \subsection{Relation to Berry-Keating theory}
 
 The form factor correction $\delta b_2^{\mathrm{PNT}}(\tau) = -\tau/\log^2 T$
