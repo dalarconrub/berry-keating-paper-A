@@ -1,4 +1,5 @@
 # Gap ratio statistics of Riemann zeros: measurement, mechanism, and the Berry-Keating correction
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19268721.svg)](https://doi.org/10.5281/zenodo.19268721)
 
 **Author:** David Alarcon, Universidad Pablo de Olavide, Sevilla, Spain
 
