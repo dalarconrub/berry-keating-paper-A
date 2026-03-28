@@ -13,10 +13,13 @@
 - Σ²/Δ₃ validation (Bogomolny-Keating saturation)
 - RH consistency (f < 1% for σ₀ > 0.525)
 
-## Companion papers
+## Related papers
 
-- **Paper B** (J. Number Theory): Ab initio derivation of c from Conrey-Snaith
-- **Paper C** (Annals): Berry-Keating convergence implies RH
+- **Paper A** (this paper): Gap ratio statistics of Riemann zeros — Comm. Math. Phys.
+- **Paper B**: Ab initio derivation of the Berry-Keating correction coefficient — J. Number Theory — [GitHub](https://github.com/dalarconrub/berry-keating-paper-B)
+- **Paper C**: Berry-Keating spectral convergence rates and the Riemann Hypothesis — Annals of Mathematics — [GitHub](https://github.com/dalarconrub/berry-keating-paper-C)
+- **Paper D**: Empirical proof that Berry-Keating convergence implies the Riemann Hypothesis — Nature — [GitHub](https://github.com/dalarconrub/berry-keating-paper-D)
+- **Data & code**: [GitHub](https://github.com/dalarconrub/berry-keating-riemann)
 
 ## Build
 
