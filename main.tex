@@ -518,8 +518,9 @@ probe $L \sim 3$--$20$ (mesoscopic).
 The Berry-Keating prediction~\eqref{eq:db2pnt} assumes that all zeros
 lie on the critical line. A zero $\rho_0 = \sigma_0 + i\gamma_0$ with
 $\sigma_0 \neq \tfrac{1}{2}$ would contribute an additional term to the
-form factor proportional to $T^{2\sigma_0 - 1}$, which \emph{grows} with $T$
-(for $\sigma_0 > \tfrac{1}{2}$) rather than decaying as $1/\log^2 T$.
+\emph{normalised} form factor proportional to $T^{2\sigma_0 - 2}/(\log T)^{3}$,
+which decays polynomially for $\sigma_0 < 1$ but at a rate slower than
+the Berry-Keating correction $1/\log^2 T$ when $\sigma_0$ is close to $1$.
 
 We test for such a contribution by fitting the extended model
 \begin{equation}
@@ -616,15 +617,26 @@ $\mathrm{sinc}(1) = 0$ exactly, creating a singularity in the na\"ive
 linearisation $\delta K \approx \delta Y_2 / (2\,\mathrm{sinc})$.
 This singularity is an artefact of linearisation; the exact kernel
 $K^{\mathrm{BK}} = \sqrt{\mathrm{sinc}^2 + \varepsilon\,\delta Y_2}$
-is smooth~\cite{alarcon2026c}. The Conrey--Snaith triple correlation formula~\cite{alarcon2026b} decomposes $c$ into two channels: the $R_3$ channel ($c_{R_3} = -1.6$, computed \emph{ab initio} from the triple correlation) and the gap probability channel ($c_E = +2.8$, obtained by difference), whose sum $c_{R_3} + c_E = c_{\mathrm{emp}}$ reproduces the empirical value exactly. Nevertheless, computing $c$ analytically in closed form from $\delta b_2$ remains an open problem.
+is smooth (the exact kernel
+$K^{\mathrm{BK}} = \sqrt{\mathrm{sinc}^2 + \varepsilon\,\delta Y_2}$
+regularises the apparent singularity).
+The Conrey--Snaith triple correlation formula~\cite{alarcon2026b}
+decomposes $c$ into two channels: the $R_3$ channel
+($c_{R_3} = -1.6$, computed \emph{ab initio} from the triple correlation)
+and the gap probability channel ($c_E = +2.8$, obtained by difference),
+whose sum $c_{R_3} + c_E = c_{\mathrm{emp}}$ reproduces the empirical
+value exactly. Nevertheless, computing $c$ analytically in closed form
+from $\delta b_2$ remains an open problem.
 
 \subsection{Companion papers}
 
-In a companion paper~\cite{alarcon2026c}, we prove that the
-Rudnick--Sarnak theorem on $n$-level correlations, combined with a
-linear programming bound on the 3-point correlation, implies the
-Riemann Hypothesis unconditionally. The Conrey--Snaith triple
-correlation formula decomposes $c$ into $c_{R_3} = -1.6$ and
+A companion paper~\cite{alarcon2026d} proves that every $n$-level
+correlation functional of Riemann-zero ordinates factors through the
+projection $(\sigma_j,\gamma_j)\mapsto\{\gamma_j\}$, so that no
+spacing-based statistic can detect off-line zeros; it further classifies
+three families of structural obstructions encountered in the derivation
+program for $c$. The Conrey--Snaith triple correlation formula
+decomposes $c$ into $c_{R_3} = -1.6$ and
 $c_E = +2.8$, with $c_{R_3} + c_E = c_{\mathrm{emp}}$~\cite{alarcon2026b}.
 
 
@@ -664,7 +676,7 @@ In this appendix we quantify how the Berry-Keating form factor correction
 modifies the Painlev\'e~V solution governing the spacing distribution.
 For background on the sine kernel, Fredholm determinants, and the
 $\sigma$-form of Painlev\'e~V, we refer to~\cite{tracywidom1994,
-jimbo1981, alarcon2026c}; for the joint spacing density
+jimbo1981}; for the joint spacing density
 $p_2^{\mathrm{GUE}}(s_1,s_2)$ via Schur complement,
 see~\cite{alarcon2026b, bornemann2010}.
 
